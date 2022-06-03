@@ -71,11 +71,11 @@ function asAmirror(str) {
   //pero con cada una de sus palabras invertidas, como si fuera un espejo.
   //Ej: Recibe ---> "The Henry Challenge is close!" || Devuelve ---> "ehT yrneH egnellahC si !esolc"
   //Escribe tu código aquí
-  var string = ''
-  for (let i = 0; i < str.length; i++) {
-    str.unshift(str[i])}
-  return str.join('').split(' ').reverse().join(' ')
- 
+  var strtoarray = str.split(' ')
+  var array1 = []
+  for (let i = 0; i < strtoarray.length; i++) {
+    array1.push(strtoarray[i].split('').reverse().join(''))}
+  return array1.join(' ')
 } 
 
 
@@ -132,7 +132,9 @@ function sortArray(arr) {
 
  return arr.sort((a,b) => a.length - b.length);
 
- 
+//  function(a,b){
+//    return a.length - b.length
+//  }
  
 
 
